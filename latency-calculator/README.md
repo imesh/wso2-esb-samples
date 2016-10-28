@@ -1,4 +1,6 @@
-## Latency Calculator
+# Latency Calculator
+
+This is a sample proxy service implemented for calculating mediation and endpoint latency. Please note that in this sample the timestamps have been taken inside the IN and OUT sequences and it would not include the time that message would take to mediate through the other layers of the ESB (please see [ESB architecture diagram](https://docs.wso2.com/display/ESB481/Architecture) for more details). Therefore the latency values calculated in this sample would not include some of the time intervals. If more acurate latency values are needed please use [JMX Monitoring](https://docs.wso2.com/display/ESB481/JMX+Monitoring) feature.
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -43,9 +45,9 @@
 </proxy>
 ```
 
-This is a sample proxy service implemented for calculating mediation and endpoint latency. Please note that in this sample the timestamps have been taken inside the IN and OUT sequences and it would not include the time that message would take to mediate through other layers of the ESB (please see [ESB architecture diagram](https://docs.wso2.com/display/ESB481/Architecture) for more details). Therefore the latency values calculated in this sample would exclude some Tn time. If more acurate latency values are needed please use [JMX Monitoring](https://docs.wso2.com/display/ESB481/JMX+Monitoring) feature.
 
-### How to run:
+
+## How to run:
 
 1. Add above LatencyCalculator proxy service to the ESB.
 2. Build SimpleStockQuoteService found in samples folder. This service is used as the backend endpoint in the LatencyCalculator proxy service:

@@ -1,8 +1,8 @@
-## Echo API
+# Echo API
 
 This is a sample API implemented using payload factory mediator for generating a response message using a URI parameter and server IP address.
 
-### How to run:
+## How to run:
 
 1. Start the ESB and copy sequences and API definition found inside echo-api folder into following folders:
     ```
