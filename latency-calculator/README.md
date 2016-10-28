@@ -1,4 +1,4 @@
-# Latency Calculator
+# WSO2 ESB Latency Calculator
 
 This is a sample proxy service implemented for calculating mediation and endpoint latency. Please note that in this sample the timestamps have been taken inside the IN and OUT sequences and it would not include the time that message would take to mediate through the other layers of the ESB (please see [ESB architecture diagram](https://docs.wso2.com/display/ESB481/Architecture) for more details). Therefore the latency values calculated in this sample would not include some of the time intervals. If more acurate latency values are needed please use [JMX Monitoring](https://docs.wso2.com/display/ESB481/JMX+Monitoring) feature.
 

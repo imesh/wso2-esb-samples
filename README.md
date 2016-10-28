@@ -1,4 +1,4 @@
-# WSO2 Enterprise Service Bus Samples
+# WSO2 ESB Samples
 
 This repository contains following WSO2 ESB samples:
 

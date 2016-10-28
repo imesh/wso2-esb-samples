@@ -1,4 +1,4 @@
-# Echo API
+# WSO2 ESB Echo API
 
 This is a sample API implemented using payload factory mediator for generating a response message using a URI parameter and server IP address.
 
