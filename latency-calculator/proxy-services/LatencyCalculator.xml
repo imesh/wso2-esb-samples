@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="LatencyCalculator"
+       transports="https,http"
+       statistics="enable"
+       trace="disable"
+       startOnLoad="true">
+   <target>
+      <inSequence>
+         <property name="MEDIATION_START_TIME" expression="get-property('SYSTEM_TIME')"/>
+      </inSequence>
+      <outSequence>
+         <property name="ENDPOINT1_NAME" value="Endpoint 1"/>
+         <property name="ENDPOINT1_START_TIME" expression="get-property('SYSTEM_TIME')"/>
+         <send/>
+         <property name="ENDPOINT1_END_TIME" expression="get-property('SYSTEM_TIME')"/>
+         <property name="MEDIATION_END_TIME" expression="get-property('SYSTEM_TIME')"/>
+         <property name="ENDPOINT1_LATENCY" expression="number(number(get-property('ENDPOINT1_END_TIME')) - number(get-property('ENDPOINT1_START_TIME')))" type="DOUBLE"/>
+         <property name="MEDIATION_LATENCY" expression="number(number(get-property('MEDIATION_END_TIME')) - number(get-property('MEDIATION_START_TIME')))" type="DOUBLE"/>
+         
+         <log>
+            <property name="Mediation Start Time"
+                      expression="get-property('MEDIATION_START_TIME')"/>
+            <property name="Endpoint1 Start Time"
+                      expression="get-property('ENDPOINT1_START_TIME')"/>
+            <property name="Endpoint1 End Time"
+                      expression="get-property('ENDPOINT1_END_TIME')"/>
+            <property name="Mediation End Time"
+                      expression="get-property('MEDIATION_END_TIME')"/>
+            <property name="Endpoint Latency" expression="get-property('ENDPOINT1_LATENCY')"/>
+            <property name="Mediation Latency" expression="get-property('MEDIATION_LATENCY')"/>
+         </log>
+      </outSequence>
+      <endpoint>
+         <address uri="http://localhost:9000/services/SimpleStockQuoteService"/>
+      </endpoint>
+   </target>
+   <publishWSDL uri="http://localhost:9000/services/SimpleStockQuoteService?wsdl"/>
+   <description/>
+</proxy>
