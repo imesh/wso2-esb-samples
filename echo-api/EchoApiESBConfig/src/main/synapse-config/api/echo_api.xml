@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/echo" name="echo_api" xmlns="http://ws.apache.org/ns/synapse">
+  <resource inSequence="echo_api_in_seq" methods="GET"
+    outSequence="echo_api_out_seq" protocol="http" uri-template="/{name}">
+    <faultSequence/>
+  </resource>
+</api>

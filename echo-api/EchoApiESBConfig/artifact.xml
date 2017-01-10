@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="echo_api" groupId="org.imesh.examples.EchoESBConfig.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/echo_api.xml</file>
+    </artifact>
+    <artifact name="echo_api_in_seq" groupId="org.imesh.examples.EchoESBConfig.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/echo_api_in_seq.xml</file>
+    </artifact>
+    <artifact name="echo_api_out_seq" groupId="org.imesh.examples.EchoESBConfig.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/echo_api_out_seq.xml</file>
+    </artifact>
+    <artifact name="echo_api_fault_seq" groupId="org.imesh.examples.EchoESBConfig.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/echo_api_fault_seq.xml</file>
+    </artifact>
+</artifacts>

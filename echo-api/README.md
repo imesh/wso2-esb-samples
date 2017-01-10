@@ -4,18 +4,33 @@ This is a sample API implemented using payload factory mediator for generating a
 
 ## How to run:
 
-1. Start the ESB and copy sequences and API definition found inside echo-api folder into following folders:
+1. Build EchoApiESBConfig project using Maven:
+
+   ```
+   cd EchoApiESBConfig/
+   mvn clean install
+   ```
+
+2. Build EchoApiCAR project using Maven:
+
+   ```
+   cd EchoApiCAR/
+   mvn clean install
+   ```
+
+3. Start the ESB and copy EchoApiCAR_1.0.0.car file found inside EchoApiCAR/target folder into the carbonapps folder, if the ESB distribuion is fresh carbonapps folder might need to be created at the following location:
+    
     ```
-    ESB_HOME/repository/deployment/server/synapse-configs/default/api/
-    ESB_HOME/repository/deployment/server/synapse-configs/default/sequences/
+    ESB_HOME/repository/deployment/server/synapse-configs/default/carbonapps/
     ```
-2. Make a CURL request to the echo API:
+
+4. Make a CURL request to the echo API:
 
     ```bash
-    curl -v http://<esb-hostname>:8280/echo/WSO2
+    curl -v http://localhost:8280/echo/WSO2
     ```
 
-3. A sample response similar to the following should be received:
+5. A sample response similar to the following should be received:
 
     ```bash
     > GET /echo/WSO2 HTTP/1.1

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="echo_api_in_seq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+  <property expression="get-property('SERVER_IP')" name="ServerIP"
+    scope="default" type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
+  <payloadFactory media-type="xml">
+    <format>
+      <response>
+        <hello>$1</hello>
+        <server-ip>$2</server-ip>
+      </response>
+    </format>
+    <args>
+      <arg evaluator="xml" expression="get-property('uri.var.name')"
+        xmlns:m0="http://services.samples/xsd" xmlns:ns="http://org.apache.synapse/xsd"/>
+      <arg evaluator="xml" expression="get-property('ServerIP')" xmlns:ns="http://org.apache.synapse/xsd"/>
+    </args>
+  </payloadFactory>
+  <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+  <header action="remove" name="To" scope="default"/>
+  <property action="remove" name="NO_ENTITY_BODY" scope="axis2"/>
+  <respond/>
+</sequence>

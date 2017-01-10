@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="echo_api_fault_seq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+  <log level="full"/>
+  <drop/>
+</sequence>
