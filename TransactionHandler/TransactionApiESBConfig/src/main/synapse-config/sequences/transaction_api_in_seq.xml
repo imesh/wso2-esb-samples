@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sequence name="transaction_api_in_seq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
-  <transaction action="use-existing-or-new" description="Begin"/>
+  <transaction action="new" description="Begin"/>
   <log level="custom">
     <property name="log" value="Updating customer 1..."/>
     <property expression="get-property('MessageID')" name="message-id"/>
