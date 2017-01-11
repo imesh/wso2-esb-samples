@@ -1,8 +1,8 @@
 # WSO2 ESB Transaction Handler Sample
 
-This sample illustrates how to handle database transactions in WSO2 ESB. Have a look at the [transaction_api_in_seq](TransactionApiESBConfig/src/main/synapse-config/sequences/transaction_api_in_seq.xml) for the mediation logic.
+This sample illustrates how database transactions can be handled in WSO2 ESB. Have a look at the [transaction_api_in_seq](TransactionApiESBConfig/src/main/synapse-config/sequences/transaction_api_in_seq.xml) for the mediation logic.
 
-## How to run
+## How To Run
 
 1. Start a MySQL database instance using Docker by executing the following command:
    
