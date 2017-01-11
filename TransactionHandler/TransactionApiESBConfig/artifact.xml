@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="TransactionApi" groupId="org.imesh.examples.TransactionApiESBConfig.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/TransactionApi.xml</file>
+    </artifact>
+    <artifact name="transaction_api_in_seq" groupId="org.imesh.examples.TransactionApiESBConfig.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/transaction_api_in_seq.xml</file>
+    </artifact>
+    <artifact name="transaction_api_out_seq" groupId="org.imesh.examples.TransactionApiESBConfig.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/transaction_api_out_seq.xml</file>
+    </artifact>
+    <artifact name="transaction_api_fault_seq" groupId="org.imesh.examples.TransactionApiESBConfig.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/transaction_api_fault_seq.xml</file>
+    </artifact>
+</artifacts>

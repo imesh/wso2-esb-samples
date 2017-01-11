@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="transaction_api_in_seq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+  <transaction action="use-existing-or-new" description="Begin"/>
+  <log level="custom">
+    <property name="log" value="Updating customer 1..."/>
+    <property expression="get-property('MessageID')" name="message-id"/>
+  </log>
+  <dbreport useTransaction="true">
+    <connection>
+      <pool>
+        <dsName>jdbc/CustomersDS</dsName>
+      </pool>
+    </connection>
+    <statement>
+      <sql><![CDATA[update customers set name=? where id =1]]></sql>
+      <parameter expression="get-property('MessageID')" type="VARCHAR"
+        xmlns:m0="http://services.samples" xmlns:m1="http://services.samples/xsd"/>
+    </statement>
+  </dbreport>
+  <transaction action="commit" description="Commit"/>
+  <respond/>
+</sequence>

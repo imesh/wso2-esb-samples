@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/transaction" name="TransactionApi" xmlns="http://ws.apache.org/ns/synapse">
+  <resource inSequence="transaction_api_in_seq" methods="GET"
+    outSequence="transaction_api_out_seq" protocol="http" uri-template="/">
+    <faultSequence/>
+  </resource>
+</api>
