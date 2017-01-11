@@ -74,8 +74,9 @@ This sample illustrates how database transactions can be handled in WSO2 ESB. Ha
    curl -v http://127.0.0.1:8280/transaction/
    ```
 
-8. If everything went well customer name should be updated to the message id in the database and ESB should print a log something similar to below:
+8. If everything went well name of the customer 1 should be updated to the ESB message id in the database. At the same time ESB should print a log something similar to below:
 
    ```bash
-   TID: [-1234] [] [2017-01-11 17:51:59,603]  INFO {org.apache.synapse.mediators.builtin.LogMediator} -  log = Updating customer 1..., message-id = urn:uuid:485cfa0f-f7e6-48b8-8dbd-bb13ddb1842b {org.apache.synapse.mediators.builtin.LogMediator}
+   TID: [-1234] [] [2017-01-11 17:51:59,603]  INFO {org.apache.synapse.mediators.builtin.LogMediator} -  
+   log = Updating customer 1..., message-id = urn:uuid:485cfa0f-f7e6-48b8-8dbd-bb13ddb1842b {org.apache.synapse.mediators.builtin.LogMediator}
    ```
