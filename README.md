@@ -9,5 +9,8 @@ This repository contains following WSO2 ESB samples:
 - [Latency Calculator](/LatencyCalculator/)
 
    This is a sample proxy service which calculates mediation latency in the mediation flow using the property mediator.
+   
+- [Transaction Handler](TransactionHandler/)
 
+   This is a sample REST API which illustrates how database transactions can be handled in WSO2 ESB. 
 
